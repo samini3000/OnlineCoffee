@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{48D16BE3-C17F-4D83-BE58-99574763C2DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{48D16BE3-C17F-4D83-BE58-99574763C2DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrustructure", "Infrustructure\Infrustructure.csproj", "{3E52E32A-1342-40CE-B81C-406EDD276134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrustructure", "Infrustructure\Infrustructure.csproj", "{3E52E32A-1342-40CE-B81C-406EDD276134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{EBA29F34-FDBF-487E-93BA-B9B89DF0A47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{EBA29F34-FDBF-487E-93BA-B9B89DF0A47E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{C539A0AE-812F-4C37-A144-69C070CA0D39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeHouseAPI", "CoffeeHouseAPI\CoffeeHouseAPI.csproj", "{A7845512-3AC3-42BF-BF89-61FA7C6C27CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{EBA29F34-FDBF-487E-93BA-B9B89DF0A47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBA29F34-FDBF-487E-93BA-B9B89DF0A47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBA29F34-FDBF-487E-93BA-B9B89DF0A47E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C539A0AE-812F-4C37-A144-69C070CA0D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C539A0AE-812F-4C37-A144-69C070CA0D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C539A0AE-812F-4C37-A144-69C070CA0D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C539A0AE-812F-4C37-A144-69C070CA0D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7845512-3AC3-42BF-BF89-61FA7C6C27CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7845512-3AC3-42BF-BF89-61FA7C6C27CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7845512-3AC3-42BF-BF89-61FA7C6C27CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7845512-3AC3-42BF-BF89-61FA7C6C27CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
