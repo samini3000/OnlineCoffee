@@ -9,9 +9,11 @@ namespace Infrustructure.DataAccess.Repositories
     public class CoffeeTypeRepository : ICoffeeTypeRepository
     {
         CoffeeHouseDBContext _dbContext;
+
+        //a bi directional mapper added
         private static MapperConfiguration _config = new MapperConfiguration(cfg => cfg.CreateMap<DomainCoffeeType, DataCoffeeType>().ReverseMap());
         private readonly Mapper _mapper= new Mapper(_config);
-        //private readonly Mapper  d= new Mapper(_config).r
+
         public CoffeeTypeRepository(CoffeeHouseDBContext coffeeHouseDBContext) 
         {
             _dbContext = coffeeHouseDBContext;

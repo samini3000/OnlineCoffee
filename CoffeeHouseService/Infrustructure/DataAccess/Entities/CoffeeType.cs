@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infrustructure.DataAccess.Entities
 {
-    public class CoffeeType :Entity
+    public class CoffeeType 
     {
         public int Id { get; set; }
         public string Name { get; set; }
