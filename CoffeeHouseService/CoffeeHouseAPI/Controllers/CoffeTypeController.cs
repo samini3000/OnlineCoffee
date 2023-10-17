@@ -1,6 +1,9 @@
-﻿using Domain.Entities;
+﻿using Application.CoffeeTypes;
+using Domain.Entities;
 using Domain.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Writers;
 
 namespace CoffeeHouseAPI.Controllers
 {
@@ -8,15 +11,17 @@ namespace CoffeeHouseAPI.Controllers
     [Route("[Controller]")]
     public class CoffeeTypeController : Controller
     {
+        private IMediator _mediator;
         private ICoffeeTypeRepository _coffeeTypeRepository;
-        public CoffeeTypeController(ICoffeeTypeRepository coffeeTypeRepository)
+        public CoffeeTypeController(ICoffeeTypeRepository coffeeTypeRepository, IMediator mediator)
         {
             _coffeeTypeRepository = coffeeTypeRepository;
+            _mediator = mediator;
         }
         [HttpGet("getcoffeetypes")]
-        public IActionResult GetCoffeeTypes()
+        public async Task<IEnumerable<CoffeeType>> GetCoffeeTypes()
         {
-            return Ok(_coffeeTypeRepository.GetAll());
+            return await _mediator.Send(new GetCoffeeTypesQuery());
         }
         [HttpPost("addcoffeetype")]
         public IActionResult GetCoffeeTypes([FromBody]CoffeeType coffeeType )

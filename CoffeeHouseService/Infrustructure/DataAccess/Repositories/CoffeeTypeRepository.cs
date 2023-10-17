@@ -19,17 +19,18 @@ namespace Infrustructure.DataAccess.Repositories
             _dbContext = coffeeHouseDBContext;
         }
 
-        public void Add(DomainCoffeeType entity)
+        public async Task Add(DomainCoffeeType entity)
         {
-            _dbContext.CoffeeTypes.Add(_mapper.Map<DataCoffeeType>(entity));
-            _dbContext.SaveChanges();
+            await _dbContext.CoffeeTypes.AddAsync(_mapper.Map<DataCoffeeType>(entity));
+            await _dbContext.SaveChangesAsync();
         }
 
-        public IEnumerable<DomainCoffeeType> GetAll()
+        public async Task <IEnumerable<DomainCoffeeType>> GetAll() //to do : come back and make it async
         {
             return _dbContext.CoffeeTypes
                 .Select(x=>_mapper.Map<DomainCoffeeType>(x))
                 .ToList();
+
         }
     }
 }

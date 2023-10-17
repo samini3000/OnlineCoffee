@@ -15,6 +15,7 @@ namespace Infrustructure.DataAccess
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Agent> Agents { get; set; }
 
         public CoffeeHouseDBContext(DbContextOptions options) : base(options) 
         { 
@@ -26,6 +27,7 @@ namespace Infrustructure.DataAccess
             modelBuilder.ApplyConfiguration(new InvoiceConfiuration());
             modelBuilder.ApplyConfiguration(new OrderConfiguartion());
             modelBuilder.ApplyConfiguration(new OrderConfiguartion());
+            modelBuilder.ApplyConfiguration(new AgentConfiguration());
         }
 
     }

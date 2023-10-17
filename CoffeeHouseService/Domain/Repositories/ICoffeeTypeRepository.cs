@@ -9,7 +9,7 @@ namespace Domain.Repositories
 {
     public interface ICoffeeTypeRepository
     {
-        public void Add(CoffeeType entity);
-        public IEnumerable<CoffeeType> GetAll();
+        public Task Add(CoffeeType entity);
+        public Task<IEnumerable<CoffeeType>> GetAll();
     }
 }
